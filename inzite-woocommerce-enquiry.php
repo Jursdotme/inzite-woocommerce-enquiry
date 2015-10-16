@@ -13,7 +13,7 @@ Text Domain: inzite-woocommerce-enquiry
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function inzite_enquiry_load_plugin_textdomain() {
-    load_plugin_textdomain( 'inzite-woocommerce-enquiry', FALSE, basename( dirname( __FILE__ ) ) . '/' );
+  load_plugin_textdomain( 'inzite-woocommerce-enquiry', FALSE, basename( dirname( __FILE__ ) ) . '/' );
 }
 add_action( 'plugins_loaded', 'inzite_enquiry_load_plugin_textdomain' );
 
@@ -22,7 +22,7 @@ add_action( 'plugins_loaded', 'inzite_enquiry_load_plugin_textdomain' );
 function overwrite_shortcode_woocommerce_cart(){
 	remove_shortcode('woocommerce_cart');
 	function submit_form_func( $atts ){
-		include( plugin_dir_path( __FILE__ ) . 'includes/error-messages.php');
+		include( plugin_dir_path( __FILE__ ) . 'includes/mail.php');
 		include( plugin_dir_path( __FILE__ ) . 'includes/submit-form.php');
 	}
 	add_shortcode( 'woocommerce_cart', 'submit_form_func' );
@@ -32,9 +32,9 @@ add_action( 'wp_loaded', 'overwrite_shortcode_woocommerce_cart' );
 
 add_action('plugins_loaded','alter_wc_default_templates');
 function alter_wc_default_templates() {
-    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-		remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+  remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+	remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 }
 
 // Add "Add to Enquiry" Button to sigle produkts
