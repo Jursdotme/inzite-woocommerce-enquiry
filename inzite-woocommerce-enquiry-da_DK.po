@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Inzite Woocommerce Enquiry\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Fri Oct 16 2015 12:08:25 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Fri Oct 16 2015 12:18:35 GMT+0200 (CEST)\n"
+"Last-Translator: Rasmus <rasmus@inzite.dk>\n"
+"Language-Team: \n"
+"Language: Danish\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: da_DK\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Author of the plugin
+msgid "Inzite Media"
+msgstr "Inzite Media"
+
+#: /enquiry.php:42
+msgid "Read more"
+msgstr "Læs mere"
+
+#. Name of the plugin
+msgid "Inzite Woocommerce Enquiry"
+msgstr "Inzite Woocommerce Enquiry"
+
+#. URI of the plugin
+msgid "http://inzite.dk"
+msgstr "http://inzite.dk"
+
+#. Description of the plugin
+msgid "Turn Woocommerce into an equiry system."
+msgstr "Lav Woocommerce om til et forespørgsels system."
+
+#: /inzite-woocommerce-enquiry.php:43 /inzite-woocommerce-enquiry.php:49
+msgid "Add to Enquiry"
+msgstr "Føj til forespørgsel"
+
+#: /includes/cart.php:35
+msgid "You have not added anything to your enquiry yet."
+msgstr "Du har ikke tilføjet noget til din forespørgsel endnu."
+
+#: /includes/submit-form.php:8
+msgid "Your contact information"
+msgstr "Din kontakt information"
+
+#: /includes/submit-form.php:11
+msgid "Company name"
+msgstr "Firmanavn"
+
+#: /includes/submit-form.php:16
+msgid "Contact"
+msgstr "Kontaktperson"
+
+#: /includes/submit-form.php:21
+msgid "Email"
+msgstr "E-mail"
+
+#: /includes/submit-form.php:26
+msgid "Phone"
+msgstr "Telefon"
+
+#: /includes/submit-form.php:31
+msgid "Additional info"
+msgstr "Yderligere info"
+
+#: /includes/submit-form.php:37
+msgid "Products in your enquiry"
+msgstr "Produkter i din forespørgsel"
+
+#: /includes/submit-form.php:43
+msgid "Empty inquiry"
+msgstr "Tøm kurv"
+
+#: /includes/submit-form.php:44
+msgid "Send inquiry"
+msgstr "Send Forespørgsel"

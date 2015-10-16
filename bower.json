@@ -1,0 +1,19 @@
+{
+  "name": "inzite-woocommerce-enquiry",
+  "version": "1.0.0",
+  "authors": [
+    "Rasmus Jürs <rasmus@jurs.me>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
