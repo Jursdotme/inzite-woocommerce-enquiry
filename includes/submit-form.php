@@ -36,9 +36,7 @@
     <div class="the-cart">
       <h3><?php _e('Products in your enquiry', 'inzite-woocommerce-enquiry'); ?></h3>
 
-      <div class="enquiry-cart">
-        <?php include( plugin_dir_path( __FILE__ ) . 'cart.php'); ?>
-      </div>
+      <?php include( plugin_dir_path( __FILE__ ) . 'cart.php'); ?>
 
       <a class="button disabled" style="float:left; margin: 10px 0;" id="emptyEnquiry"><?php _e('Empty inquiry', 'inzite-woocommerce-enquiry'); ?></a>
       <input type="submit" class="button"  style="float:right; margin: 10px 0;" value="<?php _e('Send inquiry', 'inzite-woocommerce-enquiry'); ?>" />

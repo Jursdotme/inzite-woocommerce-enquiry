@@ -56,3 +56,11 @@ function get_cookies_array() {
 
 	return cookies;
 }
+
+$('.single.woocommerce .add_to_enqiry_button').click(function(){
+	$(this).closest('.product').prepend(translated_string.added_to_cart_single);
+});
+
+$('.archive.woocommerce .add_to_enqiry_button').click(function(){
+	$(this).closest('.product').append(translated_string.added_to_cart_archive);
+});

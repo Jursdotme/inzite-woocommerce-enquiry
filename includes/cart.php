@@ -18,8 +18,9 @@ $args = array (
 $query = new WP_Query( $args );
 
 // The Loop
-if ( $query->have_posts() && !empty($enquiry_items) ) {
-  while ( $query->have_posts() ) {
+if ( $query->have_posts() && !empty($enquiry_items) ) { ?>
+  <div class="enquiry-cart">
+  <?php while ( $query->have_posts() ) {
     $query->the_post(); ?>
 
       <div id="<?php the_id(); ?>-div" class="enquiry-item">
@@ -29,9 +30,10 @@ if ( $query->have_posts() && !empty($enquiry_items) ) {
       </div>
 
 
-  <?php }
-} else { ?>
-  <div id="<?php the_id(); ?>-div" class="enquiry-item">
+  <?php } ?>
+  </div>
+<?php } else { ?>
+  <div class="alert info">
     <?php _e('You have not added anything to your enquiry yet.', 'inzite-woocommerce-enquiry') ?>
   </div>
 <?php }

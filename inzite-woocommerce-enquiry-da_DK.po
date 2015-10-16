@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Inzite Woocommerce Enquiry\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Oct 16 2015 12:08:25 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Fri Oct 16 2015 12:47:23 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Fri Oct 16 2015 13:40:27 GMT+0200 (CEST)\n"
 "Last-Translator: Rasmus <rasmus@inzite.dk>\n"
 "Language-Team: \n"
 "Language: Danish\n"
@@ -22,17 +22,13 @@ msgstr ""
 "X-Loco-Target-Locale: da_DK\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: /includes/error-messages.php:9
-msgid "You haven't choosen any products yet."
-msgstr "Du har ikke valgt nogen produkter endnu."
-
-#: /includes/error-messages.php:17
-msgid "You forgot to type in the name of your contact person."
-msgstr "Du har ikke indtastet et navn på en kontaktperson."
-
-#: /includes/error-messages.php:25
-msgid "Check your email address, something is wrong."
-msgstr "Det lader til at der er noget galt med den indtastede email."
+#: /inzite-woocommerce-enquiry.php:71
+msgid ""
+"<div class=\"added_to_cart_archive\">Product added. <a href=\"/cart\" "
+"class=\"alert-link\">Go to cart</a>.</div>"
+msgstr ""
+"<div class=\"added_to_cart_archive\">Produkt tilføjet. <a href=\"/cart\" "
+"class=\"alert-link\">Gå til kurv</a>.</div>"
 
 #. Name of the plugin
 msgid "Inzite Woocommerce Enquiry"
@@ -50,21 +46,43 @@ msgstr "Lav Woocommerce om til et forespørgsels system."
 msgid "Inzite Media"
 msgstr "Inzite Media"
 
-#: /inzite-woocommerce-enquiry.php:43 /inzite-woocommerce-enquiry.php:49
+#: /inzite-woocommerce-enquiry.php:52 /inzite-woocommerce-enquiry.php:58
 msgid "Add to Enquiry"
 msgstr "Tilføj til forespørgsel"
+
+#: /inzite-woocommerce-enquiry.php:70
+msgid ""
+"<div class=\"alert success\">This product has been succesfully added to the "
+"cart. To send the enquiry <a href=\"/cart\" class=\"alert-link\">go to the "
+"cart</a>.</div>"
+msgstr ""
+"<div class=\"alert success\">Dette produkt er blevet tilføjet til kurven. For "
+"at sende forespørgslen skal du <a href=\"/cart\" class=\"alert-link\">gå til "
+"kurven</a>.</div>"
 
 #: /includes/cart.php:35
 msgid "You have not added anything to your enquiry yet."
 msgstr "Du har ikke tilføjet noget til din forespørgsel endnu."
 
+#: /includes/error-messages.php:9
+msgid "You haven't choosen any products yet."
+msgstr "Du har ikke valgt nogen produkter endnu."
+
 #: /includes/error-messages.php:13
 msgid "You forgot to type in the company name."
 msgstr "Du har ikke skrevet noget firmanavn."
 
+#: /includes/error-messages.php:17
+msgid "You forgot to type in the name of your contact person."
+msgstr "Du har ikke indtastet et navn på en kontaktperson."
+
 #: /includes/error-messages.php:21
 msgid "You forgot to type in your email address."
 msgstr "Du har ikke skrevet nogen E-mail."
+
+#: /includes/error-messages.php:25
+msgid "Check your email address, something is wrong."
+msgstr "Det lader til at der er noget galt med den indtastede email."
 
 #: /includes/error-messages.php:29
 msgid "You forgot to type in your phone number."
