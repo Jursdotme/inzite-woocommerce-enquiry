@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Inzite Woocommerce Enquiry\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Oct 16 2015 12:08:25 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Fri Oct 16 2015 12:18:35 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Fri Oct 16 2015 12:47:23 GMT+0200 (CEST)\n"
 "Last-Translator: Rasmus <rasmus@inzite.dk>\n"
 "Language-Team: \n"
 "Language: Danish\n"
@@ -22,13 +22,17 @@ msgstr ""
 "X-Loco-Target-Locale: da_DK\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#. Author of the plugin
-msgid "Inzite Media"
-msgstr "Inzite Media"
+#: /includes/error-messages.php:9
+msgid "You haven't choosen any products yet."
+msgstr "Du har ikke valgt nogen produkter endnu."
 
-#: /enquiry.php:42
-msgid "Read more"
-msgstr "Læs mere"
+#: /includes/error-messages.php:17
+msgid "You forgot to type in the name of your contact person."
+msgstr "Du har ikke indtastet et navn på en kontaktperson."
+
+#: /includes/error-messages.php:25
+msgid "Check your email address, something is wrong."
+msgstr "Det lader til at der er noget galt med den indtastede email."
 
 #. Name of the plugin
 msgid "Inzite Woocommerce Enquiry"
@@ -42,13 +46,29 @@ msgstr "http://inzite.dk"
 msgid "Turn Woocommerce into an equiry system."
 msgstr "Lav Woocommerce om til et forespørgsels system."
 
+#. Author of the plugin
+msgid "Inzite Media"
+msgstr "Inzite Media"
+
 #: /inzite-woocommerce-enquiry.php:43 /inzite-woocommerce-enquiry.php:49
 msgid "Add to Enquiry"
-msgstr "Føj til forespørgsel"
+msgstr "Tilføj til forespørgsel"
 
 #: /includes/cart.php:35
 msgid "You have not added anything to your enquiry yet."
 msgstr "Du har ikke tilføjet noget til din forespørgsel endnu."
+
+#: /includes/error-messages.php:13
+msgid "You forgot to type in the company name."
+msgstr "Du har ikke skrevet noget firmanavn."
+
+#: /includes/error-messages.php:21
+msgid "You forgot to type in your email address."
+msgstr "Du har ikke skrevet nogen E-mail."
+
+#: /includes/error-messages.php:29
+msgid "You forgot to type in your phone number."
+msgstr "Du har ikke skrevet noget telefonnummer."
 
 #: /includes/submit-form.php:8
 msgid "Your contact information"
