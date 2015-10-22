@@ -62,17 +62,17 @@ function archive_add_enquiry_item_to_cart() {
  * Include scripts
  */
 function inzite_woocommerce_enquiry_scripts() {
-	wp_register_style( 'inzite-woocommerce-enquiry', plugins_url( 'inzite-woocommerce-enquiry/css/inzite-woocommerce-enquiry.css' ) );
+	wp_register_style( 'inzite-woocommerce-enquiry', plugins_url( 'inzite-woocommerce-enquiry/build/css/inzite-woocommerce-enquiry.min.css' ) );
 	wp_enqueue_style( 'inzite-woocommerce-enquiry' );
 
-	wp_enqueue_script( 'equiry-script', plugins_url( ) . '/inzite-woocommerce-enquiry/js/enquiry.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'equiry-script', plugins_url( ) . '/inzite-woocommerce-enquiry/build/js/enquiry.min.js', array('jquery'), '1.0.0', true );
   $translation_array = array(
   	'added_to_cart_single' => __( '<div class="alert success">This product has been succesfully added to the cart. To send the enquiry <a href="/cart" class="alert-link">go to the cart</a>.</div>', 'inzite-woocommerce-enquiry' ),
   	'added_to_cart_archive' => __( '<div class="added_to_cart_archive">Product added. <a href="/cart" class="alert-link">Go to cart</a>.</div>', 'inzite-woocommerce-enquiry' )
   );
   wp_localize_script( 'equiry-script', 'translated_string', $translation_array );
 
-	wp_enqueue_script( 'jquery-cookie', plugins_url( ) . '/inzite-woocommerce-enquiry/js/jquery.cookie.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'equiry-jquery-cookie', plugins_url( ) . '/inzite-woocommerce-enquiry/build/js/jquery.cookie.min.js', array('jquery'), '1.0.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'inzite_woocommerce_enquiry_scripts' );
