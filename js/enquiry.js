@@ -4,8 +4,6 @@ $(document).ready( function() {
 		deleteCookies();
 	});
 
-	console.log(Cookies.get());
-
 });
 
 $('.add_to_enqiry_button').click(function(){
@@ -25,8 +23,8 @@ $('.error-wrapper .close').click(function(){
 
 function deleteCookies()
 {
-	var cookies = get_cookies_array();
-	for(var name in cookies) {
+	var enquiry_cookies = get_cookies_array();
+	for(var name in enquiry_cookies) {
 		Cookies.remove( name , null );
 	}
 	$(".enquiry-cart").html('');
@@ -34,14 +32,14 @@ function deleteCookies()
 
 function checkCookies()
 {
-	var cookies = get_cookies_array();
-	for(var name in cookies) {
-		addEnquiry( name , cookies[name] );
+	var enquiry_cookies = get_cookies_array();
+	for(var name in enquiry_cookies) {
+		addEnquiry( name , enquiry_cookies[name] );
 	}
 }
 
 function get_cookies_array() {
-	var cookies = { };
+	var enquiry_cookies = { };
 	if (document.cookie && document.cookie !== '') {
 		var split = document.cookie.split(';');
 		for (var i = 0; i < split.length; i++) {
@@ -49,12 +47,12 @@ function get_cookies_array() {
 			name_value[0] = name_value[0].replace(/^ /, '');
 			if (name_value[0].indexOf('enquiry-') != -1)
 			{
-				cookies[decodeURIComponent(name_value[0])] = decodeURIComponent(name_value[1]);
+				enquiry_cookies[decodeURIComponent(name_value[0])] = decodeURIComponent(name_value[1]);
 			}
 		}
 	}
 
-	return cookies;
+	return enquiry_cookies;
 }
 
 $('.single.woocommerce .add_to_enqiry_button').click(function(){
