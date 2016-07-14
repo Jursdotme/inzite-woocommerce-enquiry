@@ -4,13 +4,15 @@ Plugin Name: Inzite Woocommerce Enquiry
 Plugin URI:  http://inzite.dk
 Description: Turn Woocommerce into an equiry system.
 Version:     1.0.0
-Author:      Inzite Media
+Author:      Rasmus Jürs / Johnnie Betelsen
 Author URI:  http://inzite.dk
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: inzite-woocommerce-enquiry
 */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+include( plugin_dir_path( __FILE__ ) . 'includes/admin.php');
 
 function inzite_enquiry_load_plugin_textdomain() {
   load_plugin_textdomain( 'inzite-woocommerce-enquiry', FALSE, basename( dirname( __FILE__ ) ) . '/' );
@@ -26,7 +28,6 @@ function inzite_enquiry_class($classes) {
         return $classes;
 }
 
-
 // Create form shortcode and swap it with the woocommerce_cart shortcode
 function overwrite_shortcode_woocommerce_cart(){
 	remove_shortcode('woocommerce_cart');
@@ -36,9 +37,9 @@ function overwrite_shortcode_woocommerce_cart(){
 	}
 	add_shortcode( 'woocommerce_cart', 'submit_form_func' );
 }
-
 add_action( 'wp_loaded', 'overwrite_shortcode_woocommerce_cart' );
 
+// Make required changes to the woocommerce templates.
 add_action('plugins_loaded','alter_wc_default_templates');
 function alter_wc_default_templates() {
   remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
@@ -60,9 +61,8 @@ function archive_add_enquiry_item_to_cart() {
   echo '<button class="add_to_enqiry_button btn btn-brand" id="' . get_the_ID() . '" data-productname="' . get_the_title() . '" data-productpermalink="' . get_the_permalink() . '">' . __('Add to Enquiry','inzite-woocommerce-enquiry') . '</button>';
 }
 
-/**
- * Include scripts
- */
+
+// Include scripts
 function inzite_woocommerce_enquiry_scripts() {
 	wp_register_style( 'inzite-woocommerce-enquiry', plugins_url( 'inzite-woocommerce-enquiry/build/css/inzite-woocommerce-enquiry.min.css' ) );
 	wp_enqueue_style( 'inzite-woocommerce-enquiry' );

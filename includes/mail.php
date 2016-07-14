@@ -46,7 +46,7 @@ if ($_POST) {
   if (!empty($posted_products) && ($posted_email != "" && $posted_validation == 1) && $posted_phone != "" && $posted_company != "" && $posted_name != "")
   {
 
-    $mail_headers = "From: <kangamiut@kangamiut.dk>" . "\r\n";
+    $mail_headers = "From: <no-reply@ntf.dk>" . "\r\n";
     $mail_subject = "Thank you for your inquiry";
     $mail_message = "";
 
@@ -71,7 +71,8 @@ if ($_POST) {
     }
     else
     {
-      $mail_to .= get_option('admin_email');
+      if ($mail_to != "") { $mail_to .= ","; }
+      $mail_to .= get_option('inzite_enquiry_recipient');
     }
 
     $mail_message .= "<div>&nbsp;</div>";
@@ -110,7 +111,7 @@ if ($_POST) {
     //Display thank you note
     echo "<div class=\"row\">";
     //echo "		<div>" . $mail_headers . "</div>";
-    //echo "		<div>Sending mail to: ". $mail_to ."</div>";
+    echo "		<div>Sending mail to: ". $mail_to ."</div>";
     //echo "		<div>Subject: " . $mail_subject . "</div>";
     echo "		<div>" . $mail_message . "</div>";
     echo "		<div><a class=\"button\" style=\"float:right;\" href=\"". curPageURL() ."\">Go back</a></div>";
